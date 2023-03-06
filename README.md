@@ -1,5 +1,5 @@
 # Devops-Project
-This Repository has all of my DevOps project that I learned and tried myself
+This repository has my whole DevOps project that I have learned and tried myself & making this repository for the public especially for the community of DevOps #GrowTogether
 
 ## Scripting Project:
 This folder consist of shell scripting project below are the project I did
