@@ -1,4 +1,4 @@
-Hello All, so in this shell script we are going to interact with GitHub API in order to fetch user details and repository details
+Hello All, so in this shell script, we will interact with the GitHub API to retrieve user and repository details.
 
 using this script, we can get repository detail which is under a particular group or member
 
