@@ -6,37 +6,33 @@ using this script, we can get repository detail which is under a particular grou
 
 Refer to [GitHub API Documentation](https://docs.github.com/en/rest?apiVersion=2022-11-28)
 
-### Pre-requisites:
+### Pre-requisites
 
 * Access Key
-    
+
 * Script file
-    
 
 # Step1:Creating Access key in GitHub
 
 * Firstly, go to your GitHub account
-    
+
 * open settings then under setting in the bottom left panel you can see developer settings select it
-    
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102491740/6a097a07-70ac-4f38-90e9-675034e9f21f.png align="left")
 
 * Now under personal access tokens select tokens
-    
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102542920/58047416-2d59-4689-be16-a6f36bf30c9f.png align="left")
 
 * click on generate a new token and select the classic option
-    
+
 * ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102687215/3d5a7e5e-164c-4b44-b1bd-bb25a161c2b7.png align="center")
-    
+
     Now it will prompt you with scopes, here we can provide some privileges for this token I'm giving few permissions for this particular token
-    
+
 * ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102830124/c80b62f6-e9fe-4370-b1fe-8c506d3af050.png align="center")
-    
+
     initially, I'm selecting repo scope then users scope
-    
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102867838/8ffe6348-cf9d-4cef-922e-11ee632f6b02.png align="center")
 

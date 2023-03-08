@@ -1,20 +1,20 @@
-# Script to report the resource usage in AWS 
+# Script to report the resource usage in AWS
+
 ## Along with CRON Job automation for the script
 
 This is a simple shell script that will help us to fetch resources from AWS Account. Using this script in our organization, we can track our resource usage so that we can limit unwanted resources to avoid bills. However, there will be a few prerequisites, which I have listed below.
 
 **<mark>Note: I'm doing the entire process on an Ubuntu machine, so based on your Operating system steps may vary</mark>**
 
-### Pre-Requisites:
+### Pre-Requisites
 
 * AWS CLI
-    
+
 * Access key
-    
 
-## Installation of prerequisites:
+## Installation of prerequisites
 
-### AWS CLI:
+### AWS CLI
 
 So on Ubuntu, I used a simple command where my package manager\[apt\] took care of everything the command is
 
@@ -24,7 +24,7 @@ sudo apt install awscli
 
 Here is the link where you can refer to install AWS CLI based on your operating system [Install AWS CLI for your OS](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-### Create and configure access key:
+### Create and configure access key
 
 To access our AWS account resources we should have an access key in our local machine to communicate and authenticate into our AWS account for that firstly we have to create the access key in our AWS account
 
@@ -54,7 +54,7 @@ once you run the above command, it will prompt you to enter the access key ID an
 
 Now scripting part.....
 
-# Script:
+# Script
 
 ```bash
 #!/bin/bash
@@ -115,7 +115,7 @@ aws iam list-users
 ```
 
 * So the above command is used to list the IAM users, but it will print the IAM user along with all the metadata of the user
-    
+
 * ```bash
             "Users": [
                     {
@@ -127,17 +127,16 @@ aws iam list-users
                         "PasswordLastUsed": "2023-02-22T14:19:41Z"
                     },
     ```
-    
+
 * To get particular metadata from the details, I used JSON parse to filter out the particular detail
-    
+
     ```bash
     aws iam list-users | jq '.Users[].UserName' >> resources.txt
     ```
-    
-* The above command is used to parse the particular value from the JSON
-    
 
-### To use the script:
+* The above command is used to parse the particular value from the JSON
+
+### To use the script
 
 create a .sh file in your machine using
 
@@ -217,7 +216,7 @@ S3 buckets are:
 2022-11-19 18:51:41 elasticbeanstalk-ap-northeast-1-303450385177
 ```
 
-## Automate Using CRON JOB:
+## Automate Using CRON JOB
 
 To improvise this script, we can schedule this script to run at a particular time daily using CRON Job
 
