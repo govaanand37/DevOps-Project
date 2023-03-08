@@ -123,8 +123,7 @@ After creating the Image, we can see the created image with all dependencies by 
 ```yaml
 sudo docker images
 ```
-
-![a7520aeb-3c8b-4fa5-b059-53610b59ce69](https://user-images.githubusercontent.com/86225331/223611714-7257aae8-e706-4d5a-a5b3-6d3ddf25266b.png)
+![0f842d99-e5ef-4666-9142-9a567a8f731b](https://user-images.githubusercontent.com/86225331/223611952-aa073e1c-ee6c-4041-98eb-613d6ad81452.png)
 
 
 here we can see the created image now let's run that in a container using the command below
@@ -135,7 +134,7 @@ sudo docker run -p 8000:8000 -it django-app
 
 This command runs a Docker container using the `Django-app` image that was previously built. The container will run a Django web application and map the container's port 8000 to the host machine's port 8000. The `-it` option attaches an interactive terminal to the container, allowing you to interact with it.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678196672106/a7520aeb-3c8b-4fa5-b059-53610b59ce69.png align="center")
+![a7520aeb-3c8b-4fa5-b059-53610b59ce69](https://user-images.githubusercontent.com/86225331/223611714-7257aae8-e706-4d5a-a5b3-6d3ddf25266b.png)
 
 After executing this command, Docker will start the container using the `Django-app` image and map its port 8000 to the host machine's port 8000. The container will run the Django web application with the specified settings, and the interactive terminal will be attached to it, allowing you to interact with the container's command line. You can use this container to host and test your Django application.
 
@@ -147,4 +146,5 @@ Now we can hit the public IP of our ec2 instance to see the app interface as bel
 
 This is the output of the Django app that runs in our container.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678196336826/deb63d89-ac25-45e8-8ba6-638132b2b4d9.png align="center")
+![deb63d89-ac25-45e8-8ba6-638132b2b4d9](https://user-images.githubusercontent.com/86225331/223612033-c1224944-8378-49ae-88b8-6828a4567af2.png)
+
