@@ -18,27 +18,27 @@ Refer to [GitHub API Documentation](https://docs.github.com/en/rest?apiVersion=2
 
 * open settings then under setting in the bottom left panel you can see developer settings select it
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102491740/6a097a07-70ac-4f38-90e9-675034e9f21f.png align="left")
+![1](https://user-images.githubusercontent.com/86225331/223612408-fa283996-e50c-439f-8e1f-f9b6725d96c6.png)
 
 * Now under personal access tokens select tokens
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102542920/58047416-2d59-4689-be16-a6f36bf30c9f.png align="left")
+![2](https://user-images.githubusercontent.com/86225331/223612416-e371f327-6124-46ed-8427-6d2686996f19.png)
 
 * click on generate a new token and select the classic option
 
-* ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102687215/3d5a7e5e-164c-4b44-b1bd-bb25a161c2b7.png align="center")
+![3](https://user-images.githubusercontent.com/86225331/223612423-4ae677f3-038a-472a-a2f0-66d5d25ff68b.png)
 
     Now it will prompt you with scopes, here we can provide some privileges for this token I'm giving few permissions for this particular token
 
-* ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102830124/c80b62f6-e9fe-4370-b1fe-8c506d3af050.png align="center")
+![4](https://user-images.githubusercontent.com/86225331/223612427-a592aa4a-06ec-4b6e-8ca4-04fa49134915.png)
 
     initially, I'm selecting repo scope then users scope
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678102867838/8ffe6348-cf9d-4cef-922e-11ee632f6b02.png align="center")
+![5](https://user-images.githubusercontent.com/86225331/223612445-cc2d5bd7-6533-4d49-8f36-c4f6d330696f.png)
 
 you can give scope whatever you wanted to do with this token and click on generate a token in the bottom, and it will provide you the hash code\[access key\] copy that and open your terminal put the access key in a variable called password\[(<mark>user defined) give whatever name you want for the variable, for understanding purpose I used the variable name as password</mark>\]
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678103152697/7c1f2b35-cd18-4d60-a647-920939c0340b.png align="center")
+![6](https://user-images.githubusercontent.com/86225331/223612443-3b0259f4-e9c9-441b-80fa-305c6e6b9cac.png)
 
 <mark>NOTE: never share this token with anyone since it's your private access token</mark>
 
@@ -191,11 +191,11 @@ Now we have to run that script using the below command and here I'm providing my
 
 After executing the script using the above command, it will prompt the user to enter the username
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678104332340/6330ec97-9714-4e56-bb45-b3c97b099325.png align="center")
+![7](https://user-images.githubusercontent.com/86225331/223612439-941e46a9-5ade-4989-ae19-1355877af763.png)
 
 After entering the name, it will again prompt the user to select any one option to provide details if the user enters 1 they will get the user detail
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678104416711/51419b82-f39e-4139-8263-edbe01fa2466.png align="center")
+![8](https://user-images.githubusercontent.com/86225331/223612447-d6d6775e-b006-4e6d-9c2a-af9461e87147.png)
 
 If they choose 2, they will get information about what repositories the user has in his GitHub account.
 
