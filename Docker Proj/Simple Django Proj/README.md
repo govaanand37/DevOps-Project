@@ -80,7 +80,8 @@ CMD ["manage.py", "runserver", "0.0.0.0:8000"]
 
 requirement.txt consists of dependencies to be installed while containerizing
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678195504197/e4f023ed-468f-4979-b78a-5d0edd75008f.png align="center")
+![e4f023ed-468f-4979-b78a-5d0edd75008f](https://user-images.githubusercontent.com/86225331/223611604-3084bc54-af7b-4629-9e64-c58dc11859f2.png)
+
 
 Here is a step-by-step explanation of the Dockerfile:
 
@@ -114,7 +115,8 @@ This command builds a Docker image from the Dockerfile in the current directory,
 
 once this command started, it will take some time to create content because it will download Ubuntu and install all the mentioned dependencies
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678195886546/28fa136b-77ed-4d65-895d-b4a3fe7d749a.png align="center")
+![28fa136b-77ed-4d65-895d-b4a3fe7d749a](https://user-images.githubusercontent.com/86225331/223611660-ec140224-a377-49fc-a827-46fd67feff02.png)
+
 
 After creating the Image, we can see the created image with all dependencies by running the below command
 
@@ -122,7 +124,8 @@ After creating the Image, we can see the created image with all dependencies by 
 sudo docker images
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678196062237/0f842d99-e5ef-4666-9142-9a567a8f731b.png align="center")
+![a7520aeb-3c8b-4fa5-b059-53610b59ce69](https://user-images.githubusercontent.com/86225331/223611714-7257aae8-e706-4d5a-a5b3-6d3ddf25266b.png)
+
 
 here we can see the created image now let's run that in a container using the command below
 
