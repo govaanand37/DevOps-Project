@@ -32,7 +32,7 @@ To access our AWS account resources we should have an access key in our local ma
 
 Login into your AWS account and click on your AWS account name which will be located in the right corner
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1677074786770/f7d85e88-4133-4aca-a9fd-bf62f7893296.png align="center")
+![1](https://user-images.githubusercontent.com/86225331/223612867-4a111e5c-5380-42c6-ab73-51532ea26b8a.png)
 
 and select the security credentials once the security page is loaded, scroll and find the access key then click create access key it will prompt you with some warning read that and click Create
 
@@ -50,7 +50,7 @@ aws configure
 
 once you run the above command, it will prompt you to enter the access key ID and secret paste them that's it also adds the default region name if required
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1677075313669/bd70b2b6-827b-4652-af78-630f4b183bd3.png align="center")
+![2](https://user-images.githubusercontent.com/86225331/223612869-9eca01c9-b14f-4a70-b8f7-b342c2dd9fff.png)
 
 Now scripting part.....
 
@@ -224,7 +224,7 @@ Run `sudo nano /etc/crontab`
 
 this will open the crontab file that we have in the etc/ directory
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1677083451463/2112aa3e-94a2-4f7a-8d9f-20046a3588ab.png align="center")
+![3](https://user-images.githubusercontent.com/86225331/223612872-5900cb26-c775-42e6-8a24-4a095303c0e1.png)
 
 Let me add the job now to run this shell scripting file daily at 16:40\[4:40 pm\]
 
