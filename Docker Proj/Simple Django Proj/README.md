@@ -2,7 +2,8 @@ Hey all,
 
 The purpose of this blog is to demonstrate how a Docker file can be used to containerize a Django application. By exposing the port, we can access the application in the network
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678193030015/3842a694-4107-439d-b215-7de9462e418b.png align="center")
+![Screenshot 2023-03-07 211434](https://user-images.githubusercontent.com/86225331/223611249-77238372-a25e-4603-9c10-248835d67ccb.png)
+
 
 ## Pre-requisite
 
@@ -16,7 +17,7 @@ The purpose of this blog is to demonstrate how a Docker file can be used to cont
 
 * Firstly we should have an ec2 instance so, Create an ec2 instance\[Linux-AMI\] in your AWS account and add the inbound rule under security like below
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1678193152239/0a247e77-8e86-4835-8eaa-bfda813ccf76.png align="center")
+![0a247e77-8e86-4835-8eaa-bfda813ccf76](https://user-images.githubusercontent.com/86225331/223611421-26dc172a-2b54-4c49-b6c3-af923ecbf54b.png)
 
 * After creating the ec2 instance, log in to the ec2 instance and install the following dependencies
 
