@@ -1,3 +1,6 @@
+![aws-services](https://user-images.githubusercontent.com/86225331/224666876-5e1d6a89-94c3-41eb-ac7b-43ab853f23aa.jpg)
+
+
 # Script to report the resource usage in AWS
 
 ## Along with CRON Job automation for the script
