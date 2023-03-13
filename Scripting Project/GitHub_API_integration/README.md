@@ -1,3 +1,5 @@
+![68747470733a2f2f6861636b65726e6f6f6e2e636f6d2f696d616765732f677034733332706b2e6a7067](https://user-images.githubusercontent.com/86225331/224667384-89da2837-d74a-45cc-8250-4d4859e4fd91.jpeg)
+
 Hello All, so in this shell script, we will interact with the GitHub API to retrieve user and repository details.
 
 using this script, we can get repository detail which is under a particular group or member
