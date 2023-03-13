@@ -23,3 +23,8 @@ This folder consist of shell scripting project below are the project I did
 This folder consist of docker projects
 
 * Django App - demonstrated how a Docker file can be used to containerize a Django application
+
+## Jenkins
+This folder consist of project related to jenkins
+
+- Jenkins_on_docker - This project has simple docker compose file which will create a jenkins sandbox in our local machine using docker
