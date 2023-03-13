@@ -3,7 +3,7 @@
 
 # Jenkins on docker
 
-This docker compose file has all the required services to create a new Jenkins [kinda sandbox] using docker in our local machine. 
+This docker compose file has all the required services to create a new Jenkins [environment] using docker in our local machine. 
 we can use this Jenkins for practice purpose
 
 ## Pre-requisite

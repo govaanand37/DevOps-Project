@@ -27,4 +27,4 @@ This folder consist of docker projects
 ## Jenkins
 This folder consist of project related to jenkins
 
-- Jenkins_on_docker - This project contains a simple docker compose file which will create a jenkins sandbox in our local machine using docker
+- Jenkins_on_docker - This project contains a simple docker compose file which will create a jenkins environment in our local machine using docker
