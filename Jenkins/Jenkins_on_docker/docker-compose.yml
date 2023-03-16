@@ -10,7 +10,7 @@ services:
     container_name: my-jenkins-3
     volumes:
     # Create a folder in your local machine in the name of jenkins_data(user defined name you can give whatever name you want)
-    and copy the path of it and paste it like below 
+    # and copy the path of it and paste it like below 
     # Example: - [your jenkins_data path]:/var/jenkins_home
       - D:\jenkins\gova\Session\jenkins_data:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
