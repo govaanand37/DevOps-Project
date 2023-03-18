@@ -9,7 +9,7 @@
 
 This repository has my whole DevOps project that I have learned and tried myself & making this repository for the public especially for the community of DevOps #Grow-together #Learn-together
 
- ```Note:Each project has their own README file for reference, please refer that if you want to try the same project```
+ ```Note:In Each project i have added README file for reference, please refer that if you want to try the same project```
 
 ## Scripting Project
 
