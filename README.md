@@ -28,3 +28,7 @@ This folder consist of docker projects
 This folder consist of project related to jenkins
 
 - Jenkins_on_docker - This project contains a simple docker compose file which will create a jenkins environment in our local machine using docker
+
+## Terraform
+This folder consist of topics and projects i learnt/tried
+- basics[provider,variable,resource,statefile,output..etc],Module,workspace,provisioner,remote-backend
