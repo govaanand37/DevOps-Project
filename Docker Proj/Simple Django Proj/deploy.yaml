@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-python-app
+  labels:
+    app: pytho-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pytho-app
+  template:
+    metadata:
+      labels:
+        app: pytho-app
+    spec:
+      containers:
+      - name: app
+        image: govarthan/python-app:v2
+        ports:
+        - containerPort: 80
