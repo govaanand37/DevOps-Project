@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: mycm
 data:
-  name: Govarthan Anandhan
+  name: Govarthan
 
