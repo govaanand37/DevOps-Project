@@ -33,4 +33,8 @@ This folder consist of project related to jenkins
 
 ## Terraform
 This folder consist of topics and projects i learnt/tried
-- basics[provider,variable,resource,statefile,output..etc],Module,workspace,provisioner,remote-backend
+- basics[provider,variable,resource,statefile,output..etc],Module,workspace,provisioner,remote-backend,VPC Creation
+
+## K8S
+This folder consist of topics and projects i learnt/tried in kuberenetes world
+- Deployement, Replicaset, Config-Map, Services
