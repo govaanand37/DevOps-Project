@@ -1,0 +1,36 @@
+---
+- name: Basic Web Server Setup  # The playbook name for setting up a basic web server
+  hosts: webservers  # The target group of hosts (defined in the inventory) where the tasks will run
+  become: true  # Ensures the tasks are executed with elevated privileges (sudo)
+
+  vars:
+    http_port: 80  # Defining a variable for the HTTP port
+
+  tasks:
+    - name: Install Apache  # Task to install the Apache web server
+      apt:
+        name: apache2  # The name of the package to be installed
+        state: present  # Ensures that the package is installed; 'absent' would uninstall it
+        update_cache: yes  # Updates the apt cache before installing the package
+
+    - name: Start Apache service  # Task to ensure the Apache service is running
+      service:
+        name: apache2  # The name of the service to manage
+        state: started  # Ensures that the service is started
+        enabled: yes  # Ensures that the service is enabled to start at boot
+
+    - name: Create index.html  # Task to create or overwrite the index.html file
+      copy:
+        content: "<h1>Welcome to Ansible Managed Server</h1>"  # The content to be written in the file
+        dest: /var/www/html/index.html  # The destination path where the file will be created
+
+    - name: Open port in UFW  # Task to open the specified port in the firewall
+      ufw:
+        rule: allow  # The rule to allow traffic
+        port: "{{ http_port }}"  # The port to open (using the variable defined earlier)
+        proto: tcp  # The protocol to allow (TCP in this case)
+
+    - name: Apply Terraform configurations  # Task to apply Terraform configurations (assuming Terraform is installed)
+      command: terraform apply -auto-approve  # Runs the Terraform apply command to provision resources
+      args:
+        chdir: /path/to/terraform/configuration  # Specifies the directory where Terraform configuration files are located

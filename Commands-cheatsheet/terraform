@@ -1,0 +1,48 @@
+# Initialize the Terraform working directory
+terraform init
+# This command downloads the necessary providers and modules specified in the configuration files.
+
+# Validate the Terraform configuration files
+terraform validate
+# Checks the configuration files for syntax errors and other issues.
+
+# Generate and show an execution plan
+terraform plan
+# This shows what actions Terraform will take to achieve the desired state, without actually making any changes.
+
+# Apply the changes required to reach the desired state of the configuration
+terraform apply -auto-approve
+# Applies the changes required to match the configuration and automatically approves them without prompting.
+
+# Destroy the Terraform-managed infrastructure
+terraform destroy -auto-approve
+# Removes all the resources managed by Terraform, returning the environment to its original state.
+
+# Format the configuration files to a canonical format
+terraform fmt
+# Ensures that the configuration files are properly formatted according to the standard style.
+
+# Show the current state or a saved state
+terraform show
+# Displays the current state of the infrastructure as managed by Terraform.
+
+# Output the value of an output variable
+terraform output
+# Retrieves and prints the value of a specific output variable defined in the configuration.
+
+# Refresh the state file with the current infrastructure
+terraform refresh
+# Updates the state file with the real-world resources' current state without making any changes.
+
+# Import existing infrastructure into Terraform's state
+terraform import aws_instance.example i-abcd1234
+# Imports an existing resource (in this case, an AWS instance) into Terraform's state management.
+
+# List the resources managed by Terraform
+terraform state list
+# Displays all resources tracked by the state file.
+
+# Remove a specific resource from the state file
+terraform state rm aws_instance.example
+# Deletes the resource from the state file without deleting it from the actual infrastructure.
+

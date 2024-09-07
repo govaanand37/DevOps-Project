@@ -1,0 +1,43 @@
+# Run a playbook on specified hosts
+ansible-playbook playbook.yml
+# Executes the tasks defined in 'playbook.yml' on the targeted hosts.
+
+# Check what changes would be made without actually applying them
+ansible-playbook playbook.yml --check
+# Runs the playbook in 'dry-run' mode, showing the changes without applying them.
+
+# Limit execution to specific hosts or groups
+ansible-playbook playbook.yml --limit "webservers"
+# Restricts the playbook execution to the 'webservers' group or specified hosts.
+
+# Execute a single task in playbook
+ansible-playbook playbook.yml --tags "install"
+# Executes only the tasks tagged with 'install' in the playbook.
+
+# List all available tags in a playbook
+ansible-playbook playbook.yml --list-tags
+# Displays all tags defined in the playbook.
+
+# List all hosts and their information
+ansible all -m ping
+# Pings all hosts in the inventory to check connectivity.
+
+# Run an ad-hoc command on all hosts
+ansible all -m apt -a "name=nginx state=present"
+# Installs the 'nginx' package on all hosts using the 'apt' module.
+
+# Execute a playbook with elevated privileges (sudo)
+ansible-playbook playbook.yml --become
+# Runs the playbook with sudo privileges on the target hosts.
+
+# Specify an inventory file to use
+ansible-playbook -i inventory.ini playbook.yml
+# Uses the specified inventory file (inventory.ini) instead of the default one.
+
+# Gather facts about remote hosts
+ansible all -m setup
+# Collects and displays system information (facts) about the hosts.
+
+# Copy a file to remote hosts
+ansible all -m copy -a "src=/local/path dest=/remote/path"
+# Copies a file from the local machine to the specified path on all remote hosts.

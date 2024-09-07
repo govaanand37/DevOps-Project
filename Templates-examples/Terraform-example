@@ -1,0 +1,72 @@
+# Provider Configuration
+provider "aws" {
+  region = "us-west-2"  # Specifies the AWS region to use for resources
+}
+
+# Backend Configuration
+terraform {
+  backend "s3" {
+    bucket = "your-terraform-state-bucket"  # S3 bucket to store Terraform state file
+    key    = "terraform/state"  # Path within the bucket where the state file is stored
+    region = "us-west-2"  # Region where the S3 bucket is located
+  }
+}
+
+# Module Example
+module "vpc" {
+  source = "terraform-aws-modules/vpc/aws"  # Source for the VPC module from the Terraform Registry
+  version = "2.0.0"  # Specifies the version of the module to use
+
+  name = "my-vpc"  # Name of the VPC
+  cidr = "10.0.0.0/16"  # CIDR block for the VPC
+  azs  = ["us-west-2a", "us-west-2b"]  # Availability Zones to use for subnets
+
+  private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]  # CIDR blocks for private subnets
+  public_subnets  = ["10.0.3.0/24", "10.0.4.0/24"]  # CIDR blocks for public subnets
+
+  enable_nat_gateway = true  # Enables NAT gateways for outbound internet access for private subnets
+}
+
+# Resource Example
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"  # Amazon Machine Image ID for the instance
+  instance_type = "t2.micro"  # Instance type (e.g., t2.micro for a small, general-purpose instance)
+
+  tags = {
+    Name = "ExampleInstance"  # Tagging the instance with a name
+  }
+}
+
+# Outputs
+output "instance_id" {
+  value = aws_instance.example.id  # Outputs the ID of the created AWS instance
+}
+
+# Variables
+variable "instance_type" {
+  description = "Type of the instance"  # Description of the variable
+  type        = string  # Data type of the variable
+  default     = "t2.micro"  # Default value for the variable
+}
+
+# Data Source Example
+data "aws_ami" "latest_amazon_linux" {
+  most_recent = true  # Get the most recent AMI that matches the filter criteria
+  owners      = ["amazon"]  # Specify the owner of the AMI (Amazon in this case)
+
+  filter {
+    name   = "name"  # Filter by the AMI name
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]  # Pattern to match the AMI name
+  }
+}
+
+
+Explanation of Concepts:
+
+    Provider Configuration: Defines the cloud provider (AWS in this case) and the region where resources will be created.
+    Backend Configuration: Specifies where Terraform's state file is stored, crucial for tracking infrastructure.
+    Module: A reusable block of Terraform configurations. Here, it's used to create a VPC.
+    Resource: The basic building block in Terraform, representing a single piece of infrastructure (e.g., an EC2 instance).
+    Outputs: Allow you to export information about your resources (e.g., instance IDs) for use elsewhere.
+    Variables: Enable you to parameterize your Terraform configurations, making them more flexible.
+    Data Sources: Allow you to query information (e.g., latest AMI) from your cloud provider without creating resources.

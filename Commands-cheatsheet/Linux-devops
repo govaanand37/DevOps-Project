@@ -1,0 +1,318 @@
+1. Basic File and Directory Management
+
+# List files and directories in the current directory
+ls -alh
+# Shows all files, including hidden ones, in long format with human-readable file sizes.
+
+# Change the current directory
+cd /path/to/directory
+# Moves to the specified directory.
+
+# Print the current working directory
+pwd
+# Displays the full path of the current directory.
+
+# Create a new directory
+mkdir new_directory
+# Creates a directory named 'new_directory'.
+
+# Remove a file or directory
+rm -rf file_or_directory
+# Recursively deletes files or directories without asking for confirmation.
+
+# Copy files or directories
+cp -r source destination
+# Copies files or directories recursively from source to destination.
+
+# Move or rename files or directories
+mv old_name new_name
+# Moves or renames a file or directory.
+
+# Create an empty file or update the timestamp of an existing file
+touch filename
+# Creates a new empty file or updates the access time of an existing file.
+
+# Display the contents of a file
+cat filename
+# Outputs the entire content of a file to the terminal.
+
+# Display the first 10 lines of a file
+head filename
+# Shows the first 10 lines of the file.
+
+# Display the last 10 lines of a file
+tail filename
+# Shows the last 10 lines of the file.
+
+# Continuously monitor the end of a file
+tail -f logfile
+# Continuously displays new lines added to a log file in real-time.
+
+
+2. File Permissions and Ownership
+
+# Change the permissions of a file or directory
+chmod 755 filename
+# Sets read, write, and execute permissions for the owner, and read and execute permissions for others.
+
+# Change the ownership of a file or directory
+chown user:group filename
+# Changes the owner and group of the file or directory.
+
+# Change the group ownership of a file or directory
+chgrp groupname filename
+# Changes only the group ownership of the file or directory.
+
+3. File Searching and Manipulation
+# Find files or directories by name
+find /path -name "*.log"
+# Searches for files with a '.log' extension starting from the specified path.
+
+# Search for text within files
+grep "search_term" filename
+# Searches for lines containing 'search_term' in the specified file.
+
+# Count the number of lines, words, and characters in a file
+wc filename
+# Displays the number of lines, words, and characters in the file.
+
+# Sort the lines in a file
+sort filename
+# Sorts the lines in the file alphabetically.
+
+# Remove duplicate lines in a file
+uniq filename
+# Removes adjacent duplicate lines in the file (usually used with sort).
+
+# Display disk usage of files and directories
+du -sh *
+# Displays the disk usage of files and directories in human-readable format.
+
+# Display free disk space
+df -h
+# Shows available disk space on all mounted filesystems in human-readable format.
+
+# Create a compressed archive of a directory
+tar -czvf archive.tar.gz /path/to/directory
+# Creates a gzip-compressed archive of the specified directory.
+
+# Extract a compressed archive
+tar -xzvf archive.tar.gz
+# Extracts the contents of the gzip-compressed archive.
+
+# Display the first few lines of a file
+head -n 20 filename
+# Shows the first 20 lines of the file.
+
+
+4. System Monitoring and Process Management
+
+# Display running processes
+ps aux
+# Lists all running processes with detailed information.
+
+# Show system resource usage
+top
+# Displays a real-time view of system resource usage.
+
+# Kill a process by PID
+kill -9 1234
+# Forcefully kills the process with PID 1234.
+
+# Kill processes by name
+pkill -f process_name
+# Terminates all processes matching the name 'process_name'.
+
+# Monitor system logs in real-time
+journalctl -f
+# Continuously displays new system log entries.
+
+# Display memory usage
+free -h
+# Shows the system's memory usage in human-readable format.
+
+# Check disk I/O statistics
+iostat
+# Displays CPU and I/O statistics for devices and partitions.
+
+# Check network connections and listening ports
+netstat -tuln
+# Lists all open ports and their listening states.
+
+# Check available network interfaces
+ifconfig -a
+# Displays all network interfaces and their configurations.
+
+# Display system uptime
+uptime
+# Shows how long the system has been running and the current load average.
+
+# Display information about the CPU
+lscpu
+# Provides detailed information about the CPU architecture.
+
+5. Networking
+
+# Display or configure network interfaces
+ifconfig eth0
+# Shows the configuration of the 'eth0' network interface.
+
+# Display routing table information
+route -n
+# Displays the kernel's IP routing table.
+
+# Check network connectivity
+ping google.com
+# Sends ICMP echo requests to check connectivity with a remote host.
+
+# Perform a DNS lookup
+nslookup example.com
+# Queries the DNS server to resolve the domain name 'example.com'.
+
+# Display open network ports
+ss -tuln
+# Lists all open ports and listening services.
+
+# Transfer files using SCP
+scp file.txt user@remote:/path/to/destination
+# Securely copies a file to a remote server using SSH.
+
+# Connect to a remote server via SSH
+ssh user@remote-server
+# Establishes an SSH connection to a remote server.
+
+# Download files from the web
+wget http://example.com/file.tar.gz
+# Downloads a file from the specified URL.
+
+# Download files using cURL
+curl -O http://example.com/file.tar.gz
+# Downloads a file from the specified URL using cURL.
+
+# Test the connection to a specific port
+telnet example.com 80
+# Attempts to connect to 'example.com' on port 80.
+
+# Display network interface statistics
+ip -s link
+# Shows packet statistics for all network interfaces.
+
+6. User Management
+
+# Add a new user to the system
+sudo adduser newuser
+# Creates a new user account named 'newuser'.
+
+# Delete a user from the system
+sudo deluser username
+# Removes the user account and, optionally, its home directory.
+
+# Add a user to a group
+sudo usermod -aG groupname username
+# Adds the user to the specified group without affecting other group memberships.
+
+# Change a user's password
+passwd username
+# Sets a new password for the user account.
+
+# Switch to another user account
+su - username
+# Switches to the specified user account with their login shell.
+
+# Display current user information
+id
+# Shows the user ID (UID) and group ID (GID) of the current user.
+
+# Display the last login information of users
+last
+# Displays the last login details for all users.
+
+
+7. File System Management
+
+# Mount a filesystem
+sudo mount /dev/sdb1 /mnt
+# Mounts the device '/dev/sdb1' to the '/mnt' directory.
+
+# Unmount a filesystem
+sudo umount /mnt
+# Unmounts the filesystem mounted at '/mnt'.
+
+# Create a new filesystem
+sudo mkfs.ext4 /dev/sdb1
+# Creates an ext4 filesystem on the specified device.
+
+# Check and repair a filesystem
+sudo fsck /dev/sdb1
+# Checks the filesystem for errors and attempts to repair them.
+
+# Display filesystem disk space usage
+df -h
+# Shows the disk usage of all mounted filesystems in human-readable format.
+
+8. Package Management
+
+# Update package lists
+sudo apt-get update
+# Fetches updated package lists from the repositories (Debian/Ubuntu).
+
+# Upgrade all installed packages to the latest version
+sudo apt-get upgrade
+# Upgrades all installed packages to their latest available versions (Debian/Ubuntu).
+
+# Install a package
+sudo apt-get install package_name
+# Installs the specified package from the repositories (Debian/Ubuntu).
+
+# Remove a package
+sudo apt-get remove package_name
+# Uninstalls the specified package, leaving configuration files intact (Debian/Ubuntu).
+
+# Search for a package in the repositories
+apt-cache search package_name
+# Searches for packages matching 'package_name' in the package cache (Debian/Ubuntu).
+
+# Clean up package cache
+sudo apt-get clean
+# Removes downloaded package files from the local cache (Debian/Ubuntu).
+
+# List installed packages
+dpkg -l
+# Lists all installed packages and their details (Debian/Ubuntu).
+
+# Install a package from a .rpm file
+sudo rpm -i package_name.rpm
+# Installs a package from the specified .rpm file (RedHat/CentOS).
+
+# Install a package from a .deb file
+sudo dpkg -i package_name.deb
+# Installs a package from the specified .deb file (Debian/Ubuntu).
+
+# List available package updates
+yum check-update
+# Lists all available package updates (RedHat/CentOS).
+
+
+9. System Information and Management
+
+# Display system information
+uname -a
+# Prints all system information, including kernel version, hostname, and more.
+
+# Display detailed hardware information
+lshw
+# Lists detailed hardware information about the system.
+
+# Display current kernel version
+uname -r
+# Shows the current Linux kernel version.
+
+# Display system boot messages
+dmesg
+# Displays kernel-related boot messages and hardware detection logs.
+
+# Display information about block devices
+lsblk
+# Lists all available block
+
+

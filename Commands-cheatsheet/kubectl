@@ -1,0 +1,63 @@
+# Get the status of the Kubernetes cluster
+kubectl cluster-info
+# Displays information about the Kubernetes cluster's components.
+
+# List all nodes in the cluster
+kubectl get nodes
+# Shows all nodes in the Kubernetes cluster and their statuses.
+
+# Create resources defined in a YAML file
+kubectl apply -f deployment.yml
+# Applies the configurations in 'deployment.yml' to create or update resources.
+
+# Get the status of all pods in the current namespace
+kubectl get pods
+# Lists all pods in the current namespace and their statuses.
+
+# Describe a specific pod
+kubectl describe pod mypod
+# Displays detailed information about the 'mypod' pod.
+
+# Delete a resource defined in a YAML file
+kubectl delete -f deployment.yml
+# Deletes the resources specified in 'deployment.yml'.
+
+# Scale a deployment to a specific number of replicas
+kubectl scale deployment mydeployment --replicas=5
+# Changes the number of replicas for 'mydeployment' to 5.
+
+# Get the logs from a specific pod
+kubectl logs mypod
+# Fetches and displays the logs from the 'mypod' pod.
+
+# Execute a command inside a running pod
+kubectl exec -it mypod -- /bin/bash
+# Opens an interactive terminal session inside the 'mypod' pod.
+
+# Get the status of all services in the current namespace
+kubectl get svc
+# Lists all services in the current namespace.
+
+# Expose a deployment as a service
+kubectl expose deployment mydeployment --type=LoadBalancer --port=80 --target-port=8080
+# Creates a service of type 'LoadBalancer' for 'mydeployment', mapping port 80 to the container's port 8080.
+
+# Get a list of all namespaces
+kubectl get namespaces
+# Displays all namespaces in the Kubernetes cluster.
+
+# Create a new namespace
+kubectl create namespace mynamespace
+# Creates a new namespace called 'mynamespace'.
+
+# Switch the context to a different namespace
+kubectl config set-context --current --namespace=mynamespace
+# Changes the current context to operate within 'mynamespace'.
+
+# Rollout an update to a deployment
+kubectl rollout restart deployment mydeployment
+# Restarts the pods in 'mydeployment' to apply new updates.
+
+# Rollback a deployment to a previous version
+kubectl rollout undo deployment mydeployment
+# Reverts 'mydeployment' to the previous revision.

@@ -1,0 +1,60 @@
+pipeline {
+    agent any  // Use any available agent to run the pipeline
+
+    environment {
+        // Define global environment variables
+        AWS_CREDENTIALS = credentials('aws-credentials')  // Use AWS credentials stored in Jenkins
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from the source control repository
+                git url: 'https://github.com/your-repo.git', branch: 'main'  // Fetch code from the main branch
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // Compile code or build artifacts
+                sh 'mvn clean package'  // Run Maven to clean and package the project
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                // Run unit tests
+                sh 'mvn test'  // Execute unit tests using Maven
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Deploy the application using Ansible or other tools
+                ansiblePlaybook playbook: 'deploy.yml'  // Run the Ansible playbook for deployment
+            }
+        }
+        
+        stage('Terraform Apply') {
+            steps {
+                // Apply Terraform configurations to provision infrastructure
+                sh 'terraform apply -auto-approve'  // Run Terraform to apply configurations without manual approval
+            }
+        }
+    }
+    
+    post {
+        always {
+            // Cleanup actions that always run, regardless of build outcome
+            deleteDir()  // Delete the workspace directory to clean up files
+        }
+        success {
+            // Actions to perform when the build is successful
+            echo 'Build successful!'  // Print a success message to the console
+        }
+        failure {
+            // Actions to perform when the build fails
+            echo 'Build failed!'  // Print a failure message to the console
+        }
+    }
+}
