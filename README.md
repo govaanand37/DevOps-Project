@@ -37,4 +37,4 @@ This folder consist of topics and projects i learnt/tried
 
 ## K8S
 This folder consist of topics and projects i learnt/tried in kuberenetes world
-- Deployement, Replicaset, Config-Map, Services
+- Deployement, Replicaset, Config-Map, Services .
